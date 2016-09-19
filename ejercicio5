@@ -1,0 +1,126 @@
+Last login: Mon Sep 19 17:12:55 on ttys000
+CodeaCamp06s-Mac-mini:~ codea_mac_06$ a=3
+CodeaCamp06s-Mac-mini:~ codea_mac_06$ irb
+irb(main):001:0> a=3
+=> 3
+irb(main):002:0> b=6
+=> 6
+irb(main):003:0> a+b
+=> 9
+irb(main):004:0> a-b
+=> -3
+irb(main):005:0> a+-b
+=> -3
+irb(main):006:0> str="hola"
+=> "hola"
+irb(main):007:0> str.upcase!
+=> "HOLA"
+irb(main):008:0> str
+=> "HOLA"
+irb(main):009:0> str+"Mundo"
+=> "HOLAMundo"
+irb(main):010:0> array=(1..10).to_a
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb(main):011:0> print array
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]=> nil
+irb(main):012:0> puts array 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+=> nil
+irb(main):013:0> p array 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb(main):014:0> inspect array 
+ArgumentError: wrong number of arguments (1 for 0)
+	from (irb):14:in `to_s'
+	from (irb):14
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):015:0> inspect` array 
+irb(main):016:0` p array 
+irb(main):017:0` '
+irb(main):018:0` p array 
+irb(main):019:0` print
+irb(main):020:0` `
+sh: array: command not found
+sh: line 1: p: command not found
+sh: -c: line 2: unexpected EOF while looking for matching `''
+sh: -c: line 5: syntax error: unexpected end of file
+ArgumentError: wrong number of arguments (1 for 0)
+	from (irb):15:in `to_s'
+	from (irb):15
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):021:0> a+b
+=> 9
+irb(main):022:0> str
+=> "HOLA"
+irb(main):023:0> str<<" Mundo"
+=> "HOLA Mundo"
+irb(main):024:0> str
+=> "HOLA Mundo"
+irb(main):025:0> str.upcase
+=> "HOLA MUNDO"
+irb(main):026:0> str
+=> "HOLA Mundo"
+irb(main):027:0> require Math
+TypeError: no implicit conversion of Module into String
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from (irb):27
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):028:0> require MATH
+NameError: uninitialized constant MATH
+	from (irb):28
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):029:0> require MAth
+NameError: uninitialized constant MAth
+	from (irb):29
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):030:0> require Math
+TypeError: no implicit conversion of Module into String
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from (irb):30
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):031:0> require "Math"
+LoadError: cannot load such file -- Math
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from (irb):31
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):032:0> require "Math"
+LoadError: cannot load such file -- Math
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from (irb):32
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):033:0> sqrt(9)
+NoMethodError: undefined method `sqrt' for main:Object
+	from (irb):33
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):034:0> 100.sqrt
+NoMethodError: undefined method `sqrt' for 100:Fixnum
+	from (irb):34
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):035:0> Math.sqrt(9)
+=> 3.0
+irb(main):036:0> Math.sqrt( 7690939204.)
+SyntaxError: (irb):36: syntax error, unexpected ')', expecting '('
+	from /Users/codea_mac_06/.rbenv/versions/2.2.4/bin/irb:11:in `<main>'
+irb(main):037:0> Math.sqrt( 7690939204)
+=> 87698.0
+irb(main):038:0> def shout (palabra)
+irb(main):039:1> p palabra.upcase
+irb(main):040:1> end
+=> :shout
+irb(main):041:0> shout("hola")
+"HOLA"
+=> "HOLA"
+irb(main):042:0> 
