@@ -1,0 +1,17 @@
+p "dame numero"
+num=gets.chomp.to_i
+
+while num<2 or num >100
+p "Erro de numero"
+p "dame numero"
+num=gets.chomp
+end
+
+for i in 1..num
+print "#{i} se columpiaba sobre la tela de una araña, como veía que resistía fueron a llamar a otro elefante.\n\n"
+sleep(0.5)
+end
+
+
+
+
