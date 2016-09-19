@@ -1,0 +1,18 @@
+text=gets.chomp
+bo =true
+while bo
+  if text!=text.upcase 
+  p "HUH! NO TE ESCUCHO" 
+  elsif text== "BYE TQM"
+    text=gets.chomp
+    if text== "BYE TQM"
+        text=gets.chomp
+        if text== "BYE TQM"
+          break
+        end
+      end
+  else
+  p "NO, NO DESDE 1983"
+  end
+  text=gets.chomp
+end
