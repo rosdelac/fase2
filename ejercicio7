@@ -1,0 +1,13 @@
+def diccionary_sort
+  array=[]
+  p "Escribe un palabra:"
+  palabra = gets.chomp.capitalize
+  while palabra != "" 
+    array<<palabra
+    p "Escribe un palabra o (Preciona preciona "'enter'" para finalizar):"
+    palabra = gets.chomp.capitalize
+  end
+  p "Felicidades! Tu diccionario tiene #{array.size} palabras:" 
+  puts array.sort
+end
+diccionary_sort
