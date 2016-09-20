@@ -1,0 +1,15 @@
+def shout(palabra)
+  palabra.upcase
+end
+
+def shout!(palabra)
+  palabra.upcase!
+end
+
+a = "hola"
+p shout(a) == "HOLA"
+p a == "hola"
+
+b = "adios"
+p shout!(b) == "ADIOS"
+p b == "ADIOS"
