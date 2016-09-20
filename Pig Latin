@@ -1,0 +1,8 @@
+print "Dame una palabra: "
+palabra = gets.chomp
+if palabra.chars[0].count("aeiou") == 1
+  p palabra+"way"
+else
+  num = palabra.chars.index{|x| x.count("aeiou") == 1}
+  p aux = palabra[num..palabra.size]+palabra[0..num-1]+"ay"
+end
