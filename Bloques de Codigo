@@ -1,0 +1,21 @@
+def do_block
+  start = Time.now
+  print "Your start time is: #{start}\n\n"
+  yield 
+  finish = Time.now
+  print "Your finish time is: #{finish}\n\n"
+  difference = finish - start
+  print "Your code took #{difference} seconds to complete, great!\n\n"
+end
+
+do_block{
+  print "Dame una palabra: "
+  palabra = gets.chomp
+  sleep(2)
+  if palabra.chars[0].count("aeiou") == 1
+    print palabra+"way\n\n"
+  else
+    num = palabra.chars.index{|x| x.count("aeiou") == 1}
+    print aux = palabra[num..palabra.size] + palabra[0..num-1] + "ay\n\n"
+  end
+}
