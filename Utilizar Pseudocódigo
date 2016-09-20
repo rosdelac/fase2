@@ -1,0 +1,16 @@
+Crear un arreglo que contenga arreglos con el nombre y  la calificación de cada uno de los estudiantes. 
+
+definir el metodo "best_students" que resiva como parametro el arreglo creado anteriormente.
+
+  Creamos un arreglo para guardar a los mejores estudiantes
+  Creamos X, Y variables auxiliares que inician en cero 
+
+  while Y sea menor que el tamaño del arreglo 
+      creamos un estudiante actual con el valor del arreglo recibido en la posición X,Y
+    if el estudiante actual tien calificación de diez
+      metemos el nombre del estudiante al arreglo de mejores estudiantes
+  
+    if X llego al final de los sub arreglos haz X igual a cero y Y más uno 
+      de lo contrario X más uno 
+
+regresa el arreglo de mejores estudiantes
