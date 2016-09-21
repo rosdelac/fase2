@@ -1,0 +1,44 @@
+require'benchmark'
+iterations = 1_000
+arre=(0...1000000).to_a
+
+def linear_search(num,array)
+  find = false
+  index = 0
+  while !find && index < array.size
+    find = array[index] == num
+    index += 1
+  end
+    find
+end
+
+def find(num, arre)
+  if arre.size==1
+    return arre[0]==num
+  else
+    if num<arre[arre.count/2]
+      find(num,arre[0..arre.count/2-1])
+    else
+      find(num,arre[arre.count/2..arre.count-1])
+    end
+  end
+end
+for i in 1..5
+  rn=rand(0..1500000)
+  print "====================Iteracion: #{i}====Numero #{rn}=================\n"
+  
+  Benchmark.bm do |bm|
+      bm.report do
+        print "==========Binario\n"
+        iterations.times do
+          find(rn,arre)
+        end
+      end
+      bm.report do
+        print "==========Lineal\n"
+        iterations.times do
+          linear_search(rn,arre)
+        end  
+      end
+  end
+end
