@@ -1,0 +1,26 @@
+def num_de_cuenta?(string)
+   if string.match(/\d{4}-\d{3}-\d{3}/) != nil then true else false
+  end
+ end
+p num_de_cuenta?("hola este es mi numero de cuenta 1234-123-123") == true
+
+def numero_de_cuenta(string)
+  match = string.match(/\d{4}-\d{3}-\d{3}/)
+  match[0]
+end
+p numero_de_cuenta("hola este es mi numero de cuenta 1234-123-123") == "1234-123-123"
+
+def arre_num_de_cuentas(string)
+  match = string.scan(/\d{4}-\d{3}-\d{3}/)
+end
+
+def replaza_num_cuenta(string)
+  string.gsub(/\d{4}-\d{3}/,"XXXX-XXX")
+end
+p arre_num_de_cuentas("hola este es mi numero de cuenta 1234-123-123 y el numero de cuenta de mi hermana es 4321-321-321")
+
+def formato_num_cuenta(string)
+  string.gsub(/(\d{4})\.*(\d{3})\.*(\d{3})/, '\1-\2-\3')
+end
+p arre_num_de_cuentas("hola este es mi numero de cuenta 1234.123.127 y el numero de cuenta de mi hermana es 4321432132")
+
