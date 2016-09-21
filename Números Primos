@@ -1,0 +1,13 @@
+require 'prime'
+
+def prime_factors(n)
+  resp=[]
+  arre=Prime.prime_division(n)
+  arre.each do|(x,y)|
+    for i in 1..y
+      resp<<x
+    end  
+  end
+  resp
+end
+p prime_factors(rand(1..100)) 
