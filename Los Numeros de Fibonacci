@@ -1,0 +1,56 @@
+require'benchmark'
+iterations = 10_000
+
+def fibonacci_recursive(n)
+  results={0=>0,1=>1}
+  fibonacci_recursive2(results,n)
+end
+def fibonacci_recursive2(hash,n)
+  if !hash.include?(n)
+   hash[n] = fibonacci_recursive2(hash,n-1).to_i + fibonacci_recursive2(hash,n-2).to_i
+  end
+ return hash[n]
+end
+
+
+def fibonacci_iterative(n)
+  if n>2
+    aux1=1
+    aux2=1
+    for i in 1..n-2
+      n=aux1+aux2
+      aux2=aux1
+      aux1=n
+      end 
+  elsif n>0
+    n=1
+  end
+  n
+end
+
+for i in 1..100 
+  print "Intento numero: #{i}\n"
+  Benchmark.bm do |bm|
+    bm.report do
+      iterations.times do
+        fibonacci_iterative(rand(0..i)) #== 0
+        # p fibonacci_iterative(1) == 1
+        # p fibonacci_iterative(2) == 1
+        # p fibonacci_iterative(3) == 2
+        # p fibonacci_iterative(4) == 3
+        # p fibonacci_iterative(5) == 5
+      end
+    end
+
+    bm.report do
+      iterations.times do
+        fibonacci_recursive(rand(0..i)) #== 0
+        # p fibonacci_recursive(1) == 1
+        # p fibonacci_recursive(2) == 1
+        # p fibonacci_recursive(3) == 2
+        # p fibonacci_recursive(4) == 3
+        # p fibonacci_recursive(5) == 5
+      end  
+    end
+  end
+end
