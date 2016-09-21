@@ -1,0 +1,17 @@
+def canonical(word)
+  word.chars.sort.join
+end
+
+def are_anagrams?(word1, word2)
+  canonical(word1.upcase) == canonical(word2.upcase)
+end
+
+def anagrams_for(palabra,array)
+  arre=[]
+  array.each{|x| if are_anagrams?(palabra,x) then arre<<x end }
+  arre
+end
+arreglo=["AMOR", "ROMA", "OMAR", "MORA", "RAMO", "ARMO", "MARO","RADIO","RATA","RATON"]
+
+p anagrams_for("ana", arreglo)
+p anagrams_for("amor", arreglo)
