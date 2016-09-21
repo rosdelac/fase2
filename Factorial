@@ -1,0 +1,17 @@
+def factorial_iterative(num)
+  resp=1
+  if num != 0
+    for i in 1..num
+      resp*=i
+    end
+  end
+  resp
+end   
+
+def factorial_recursive(num)
+  if num == 0
+    return 1
+  else
+    return num*factorial_recursive(num-1)
+  end
+end
