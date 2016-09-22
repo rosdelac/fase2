@@ -1,0 +1,30 @@
+def imprime_tablero
+black =[[" _______ "],["|       |"],["|       |"],["|       |"],["|_______|"]]
+white = [[" _______ "],["|||||||||"],["|||||||||"],["|||||||||"],["|||||||||"]]
+
+	for w in 0..7
+		#imprime_linea(black,white,w)
+		imprime_linea(white,black,w)
+	end
+end
+
+def imprime_linea(arre1,arre2,iteration)
+	for i in 0..arre1.size-1
+		aux1,aux2 = "",""
+		for j in 0..arre1[i].size-1
+			aux1<<arre1[i][j]
+			aux2<<arre2[i][j]
+		end
+		if iteration % 2 != 0
+			aux2<<aux1
+			aux2=aux2*4
+			p aux2 
+		else 
+			aux1<<aux2
+			aux1=aux1*4
+			p aux1
+		end
+	end
+end
+
+imprime_tablero
