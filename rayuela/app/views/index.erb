@@ -1,20 +1,32 @@
 <header>
   <img src="img/codea-logo.png" id="logo">
 </header>
-
+    <div id="marcador">
+      <p id="nameone"><span id="scoreone"></span></p>
+      <p id="nametwo"><span id="scoretwo"></span></p>
+    </div>
+<div id="nameform">
+  <form align='center'>
+    Jugador 1:<br>
+    <input type="text" id="playerone" placeholder="Jugador 1">
+    <br>
+    Jugador 2:<br>
+    <input type="text" id="playertwo" placeholder="Jugador 2">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div id="maingame"> 
 <h1 id="main-title">¡RAYUELA!</h1>
     <button id="start_btn">Jugar</button><br><br>
+    <button id="restart_btn">Reiniciar</button><br><br>
     <div id="timer"></div>
-    <div id="resultado"></div>
+    <div id="resultado" style="float:right;"></div>
 
     <table class="table">
       <tr id="Player1">
-        <td id="player1"><strong>Jugador 1</strong></td>
-        <td class="active"></td>
       </tr>
-
       <tr id="Player2">
-        <td id="player2"><strong>Jugador 2</strong></td>
-        <td class="active"></td>
       </tr>
-</table>
+    </table>
+</div>
