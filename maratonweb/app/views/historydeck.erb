@@ -1,0 +1,22 @@
+<% if @historyquestions != nil %>
+  <div class="jumbotron" align="center">
+      <h1>History Questions</h1>
+      <form id="historyform" action="/round/results/history" method="post" align="center">
+      <% @historyquestions.each do |question| %>
+    <div>
+          <h3><%= question.question %></h3>
+        <div class="radio">
+    <input type="radio" name="option[<%= question.id %>]" value="A" required><%= question.optionA %><br>
+    <input type="radio" name="option[<%= question.id %>]" value="B"><%= question.optionB %><br>
+    <input type="radio" name="option[<%= question.id %>]" value="C"><%= question.optionC %><br>
+    <input type="radio" name="option[<%= question.id %>]" value="D"><%= question.optionD %><br> 
+        </div>   
+    </div>
+      <% end %> 
+  </div>
+   <div align="center">
+    <button type="submit" form="historyform" value="Submit" class="btn btn-success" >Submit</button>
+  </div>
+    </form>
+<% end %>
+

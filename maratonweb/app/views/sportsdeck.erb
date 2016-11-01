@@ -1,0 +1,20 @@
+<% if @sportsquestions != nil then %>
+  <div class="jumbotron" align="center">
+    <h1>Sports Questions</h1> 
+  </div>
+  <form id="sportsform" action='/round/results/sports' method="post" align="center">
+    <% @sportsquestions.each do |question| %>
+  <div>
+        <h3><%= question.question %></h3>
+      <div class="radio">
+  <input type="radio" name="option[<%= question.id %>]" value="A" required><%= question.optionA %><br>
+  <input type="radio" name="option[<%= question.id %>]" value="B"><%= question.optionB %><br>
+  <input type="radio" name="option[<%= question.id %>]" value="C"><%= question.optionC %><br>
+  <input type="radio" name="option[<%= question.id %>]" value="D"><%= question.optionD %><br> 
+      </div>     
+  </div>
+    <% end %>
+    <button type="submit" form="sportsform" value="Submit" class="btn btn-success">Submit</button>
+    </form>
+<% end %>
+

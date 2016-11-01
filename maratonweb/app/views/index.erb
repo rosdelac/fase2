@@ -1,0 +1,51 @@
+<form action="/user/new/" method="post" id="register_form" align="center">
+<div class="jumbotron" align="center">
+    <h1>Welcome to the Marathon Game!</h1>
+    <h3>A game that measures your trivia knowledge, register a new account or log in to start playing!</h3>
+</div>
+    <button type="submit" id="register_button" class="btn btn-primary btn-lg">Register</button>
+    <button id="login_button" class="btn btn-primary btn-lg">Log in</button>
+</form>
+<form action="/round/new/" method="get" id="start_form" align="center">
+  <div class="jumbotron" align="center">
+    <h1>Welcome to the Marathon Game!</h1>
+    <h3>A game that measures your trivia knowledge, register a new account or log in to start playing!</h3>
+  </div>
+    <button type="submit" id="start_button" class="btn btn-primary btn-lg">New Game!</button>
+</form>
+<div id="question" align="center">
+    <div class="jumbotron">
+      <h1>Choose a category</h1>
+    </div>
+    <div>
+      <button id="historybutton" class="btn btn-warning">History</button>
+      <button id="sportsbutton" class="btn btn-info">Sports</button>
+      <button id="filmsbutton" class="btn btn-danger">Films</button>
+      <button id="musicbutton" class="btn btn-success">Music</button>
+    </div>
+</div>
+
+<div id="registerform">
+  <%= erb :registerscreen, layout: true %>
+</div>
+<div id="loginform">
+  <%= erb :loginscreen, layout: true %>
+</div>
+<div id="accountcreated">
+  <%= erb :accountcreated, layout: true %>
+</div>
+<div id="historyquestions">
+  <%= erb :historydeck, layout: true %>
+</div>
+<div id="sportsquestions">
+  <%= erb :sportsdeck, layout: true %>
+</div>
+<div id="filmquestions">
+  <%= erb :filmsdeck, layout: true %>
+</div>
+<div id="musicquestions">
+  <%= erb :musicdeck, layout: true %>
+</div>
+<div id="scorescreen">
+  <%= erb :_scorescreen, layout: true %>
+</div>
