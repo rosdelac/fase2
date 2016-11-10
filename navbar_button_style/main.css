@@ -1,0 +1,79 @@
+.container {
+  margin: 0 auto;
+  width: 720px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul li {
+   background: linear-gradient(#e6e6e6, #f3f3f3);
+  font-weight: bold;
+  text-align: center;
+  list-style-type: none;
+  float: left;
+  width: 70px;
+  padding: 15px 28px 15px 28px;
+  margin: 10px 3px 10px 3px;
+  height: 20px;
+  color: black;
+}
+
+#larga{
+  white-space: nowrap;
+  text-align: left;
+  position: relative;
+  right:28px;
+  bottom:15px;
+}
+
+#barra {
+  position:relative;
+  right: 15px;
+}
+
+
+nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#primera {
+  border-radius: 12px 0px 0px 12px;
+}
+
+#ultima {
+  border-radius: 0px 12px 12px 0px;
+}
+
+.submenu {
+  position: relative;
+  right:70px;
+  visibility:hidden;
+  text-align: center;
+}
+
+.submenu li {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#primera:hover .submenu {
+
+  visibility: visible;
+}
+
+#subprimero {
+  margin-top: 15px;
+}
