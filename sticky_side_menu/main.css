@@ -1,0 +1,59 @@
+.container {
+  margin: 0 0 0 150px;
+  width: 720px;
+  padding-left:20px;
+}
+
+#navbar {
+  position:fixed;
+  top:0;
+  background: #B9BFC0;
+  height:100%;
+  width:150px;
+}
+
+#container {
+  background-color: yellow;
+}
+
+#mininavbar {
+  position:fixed;
+  top:0;
+  background: #B9BFC0;
+  height:100%;
+  width:50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  position:relative;
+  width:150px;
+  right:40px;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  border-bottom: 1px solid black;
+}
+
+li a {
+  position: relative;
+  left:10px;
+}
+
+#togglebtn {
+  float:right;
+  position:relative;
+  bottom:210px;
+  background:transparent;
+}
+
+#togglebtn2 {
+  float:right;
+  position:relative;
+  bottom:210px;
+  background:transparent;
+}
