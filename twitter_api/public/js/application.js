@@ -1,7 +1,27 @@
 $(document).ready(function() {
-	// Este código corre después de que `document` fue cargado(loaded) 
-	// completamente. 
-	// Esto garantiza que si amarramos(bind) una función a un elemento 
-	// de HTML este exista ya en la página. 
+  $('#loadingDiv').hide();
+
+  $('body').on('submit','#form1',function(event) {
+    event.preventDefault();
+    var cadena = $(this).serialize();
+    $.post('/fetch',cadena,function(data)
+    {       
+      console.log(data);
+      $('#tws').html(data);
+      
+    });
+      $('#tws').html('<img src="/Loading_icon.gif"></img>');
+  });
+
+
+
+  // $('#loadingDiv')
+  //   .hide()  // Hide it initially
+  //   .ajaxStart(function() {
+  //       $(this).show();
+  //   })
+  //   .ajaxStop(function() {
+  //       $(this).hide();
+  //   });
 
 });

@@ -5,7 +5,19 @@ get '/' do
 end
 
 post '/fetch' do
-  redirect "/#{params[:twitterhandle]}"
+  p params[:twitterhandle]
+  @user = TwitterUser.find_or_create_by(name: params[:twitterhandle])
+    if @user.tweets.empty? || !@user.updated?
+        Tweet.where(twitter_user_id: @user.id).destroy_all 
+        tweets = CLIENT.get_all_tweets(@user.name).take(10)
+        tweets.each do |tweet|
+          tw = Tweet.create(twitter_user_id: @user.id, body: tweet.text)
+        end 
+      @tweets = @user.tweets
+    else
+      @tweets = @user.tweets
+    end
+  erb :tweets, layout: false
 end
 
 get '/:handle' do
